@@ -1,0 +1,35 @@
+{
+  "info": {
+    "_postman_id": "9d896900-c7d3-4a30-9726-bcc1a83f2cd8",
+    "name": "Auth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15272912",
+    "_collection_link": "https://lunar-moon-876537.postman.co/workspace/ITP-Team~aef6478f-3696-42ff-8478-9909ee508991/collection/15272912-9d896900-c7d3-4a30-9726-bcc1a83f2cd8?action=share&source=collection_link&creator=15272912"
+  },
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"yugantha1468@gmail.com\",\n    \"password\": \"password123\",\n    \"role\": \"admin\" \n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/login",
+          "protocol": "{{PROTOCOL}}",
+          "host": ["{{HOST}}"],
+          "port": "{{PORT}}",
+          "path": ["api", "login"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
