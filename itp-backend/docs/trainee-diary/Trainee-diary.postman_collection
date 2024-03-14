@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "7333657b-8001-4ab0-98d2-37d7e083f5bf",
+		"name": "Trainee Diary System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15272912",
+		"_collection_link": "https://lunar-moon-876537.postman.co/workspace/ITP-Team~aef6478f-3696-42ff-8478-9909ee508991/collection/15272912-7333657b-8001-4ab0-98d2-37d7e083f5bf?action=share&source=collection_link&creator=15272912"
+	},
+	"item": [
+		{
+			"name": "Create Session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionName\": \"Introduction to Power Apps 2\",\n    \"sessionOrganizer\": \"yugantha1468@gmail.com\",\n    \"location\": \"Online\",\n    \"sessionStartTimestamp\": 1696044600000,\n    \"sessionEndTimestamp\": 1696061700000,\n    \"participantEmails\": [\n        {\n            \"email\": \"shalinda.f@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        },\n        {\n            \"email\": \"supun.s@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        },\n        {\n            \"email\": \"akila.p@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        },\n        {\n            \"email\": \"radul.h@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        }\n    ],\n    \"sessionDesc\": \"sdssdds\",\n    \"sessionMaterials\": \"sdsdsds\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/api/tsms/session/create",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Session",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/65182a52cb2b9671b03c6c48",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"65182a52cb2b9671b03c6c48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Session",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionName\": \"Introduction to Power Apps\",\n    \"sessionOrganizer\": \"yugantha1468@gmail.com\",\n    \"location\": \"Online\",\n    \"sessionStartTimestamp\": 1698377400000,\n    \"sessionEndTimestamp\": 1698393600000,\n    \"participantEmails\": [\n        {\n            \"email\": \"akila.p@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        },\n        {\n            \"email\": \"shalinda.f@mas.lk\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        }\n    ],\n    \"sessionDesc\": \"dfdf\",\n    \"sessionMaterials\": \"dfdfdf\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/651dc6f1d3901b6b68e12f55",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"651dc6f1d3901b6b68e12f55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Session",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/6515827224f175c61978b923",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"6515827224f175c61978b923"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"yugantha1468@gmail.com\",\n    \"attendance\": {\n        \"present\": true,\n        \"absent\": false,\n        \"late\": false\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/attendance/6502131d770e40ada3883046",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"attendance",
+						"6502131d770e40ada3883046"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get intern session",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"shalinda.f@mas.lk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/intern",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"intern"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
