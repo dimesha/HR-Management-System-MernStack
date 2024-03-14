@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "2dd120a3-3805-4fb3-8b0f-53f9ceb767a1",
+		"name": "Training Schedule Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15272912",
+		"_collection_link": "https://lunar-moon-876537.postman.co/workspace/ITP-Team~aef6478f-3696-42ff-8478-9909ee508991/collection/15272912-2dd120a3-3805-4fb3-8b0f-53f9ceb767a1?action=share&source=collection_link&creator=15272912"
+	},
+	"item": [
+		{
+			"name": "Create Session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionName\": \"sdsdsd\",\n    \"sessionOrganizer\": \"yugantha1468@gmail.com\",\n    \"sessionDateTime\": 1692602020361,\n    \"location\": \"Sri Lanka\",\n    \"participantEmails\": [\n        {\n            \"email\": \"yugantha1468@gmail.com\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        }\n    ],\n    \"sessionDesc\": \"sdsdsd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/create",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sessions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Session",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sessionName\": \"Figma\",\n    \"sessionOrganizer\": \"yugantha1468@gmail.com\",\n    \"sessionDateTime\": \"1692602020361\",\n    \"location\": \"Sri Lanka\",\n    \"participantEmails\": [\n        {\n            \"email\": \"yugantha1468@gmail.com\",\n            \"attendance\": {\n                \"present\": false,\n                \"absent\": false,\n                \"late\": false\n            }\n        }\n    ],\n    \"sessionDesc\": \"sdsdsd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/64e361a817b3ab4e44b7806b",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"64e361a817b3ab4e44b7806b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Session",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/session/64e33f80d5ad07accefc671d",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"session",
+						"64e33f80d5ad07accefc671d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Attendance",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"yugantha1468@gmail.com\",\n    \"attendance\": {\n        \"present\": true,\n        \"absent\": false,\n        \"late\": false\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/tsms/attendance/6502131d770e40ada3883046",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"tsms",
+						"attendance",
+						"6502131d770e40ada3883046"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

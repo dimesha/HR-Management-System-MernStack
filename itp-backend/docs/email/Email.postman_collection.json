@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "db0120f1-9209-4c18-a555-fa111e2cda09",
+		"name": "Email",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15272912",
+		"_collection_link": "https://lunar-moon-876537.postman.co/workspace/ITP-Team~aef6478f-3696-42ff-8478-9909ee508991/collection/15272912-db0120f1-9209-4c18-a555-fa111e2cda09?action=share&source=collection_link&creator=15272912"
+	},
+	"item": [
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipient\": \"yugantha1468@gmail.com\",\n    \"content\": {\n        \"body\": {\n            \"greet\": \"Hello User\",\n            \"content\": \"Email body goes here\"\n        }\n    },\n    \"from\": \"No Reply <sliitproj@gmail.com>\",\n    \"subject\": \"Test mail\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PROTOCOL}}://{{HOST}}:{{PORT}}/api/email/send",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{HOST}}"
+					],
+					"port": "{{PORT}}",
+					"path": [
+						"api",
+						"email",
+						"send"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
