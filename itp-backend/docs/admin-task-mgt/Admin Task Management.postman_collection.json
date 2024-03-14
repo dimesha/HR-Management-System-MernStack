@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "c5c13f3a-6fa0-4c6e-a1ca-b44d44b100d4",
+		"name": "Admin Task Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15272912",
+		"_collection_link": "https://lunar-moon-876537.postman.co/workspace/ITP-Team~aef6478f-3696-42ff-8478-9909ee508991/collection/15272912-c5c13f3a-6fa0-4c6e-a1ca-b44d44b100d4?action=share&source=collection_link&creator=15272912"
+	},
+	"item": [
+		{
+			"name": "Greetings",
+			"item": [
+				{
+					"name": "Create Greetings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Eddy Anderson\",\n    \"position\": \"Tec Lead\",\n    \"department\": \"IT\",\n    \"message\": \"Send out a cheerful, positive greeting, and most of the time you will get back a cheerful, positive greeting. It's also true that if you send out a negative greeting, you will, in most cases, get back a negative greeting.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/greetings",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"greetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Greetings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/greetings",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"greetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Greeting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/greetings/651bf9224d1d04fe216aab81",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"greetings",
+								"651bf9224d1d04fe216aab81"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Greeting",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/greetings/651bf9a04d1d04fe216aab86",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"greetings",
+								"651bf9a04d1d04fe216aab86"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Greeting",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shalinda Fernando\",\n    \"position\": \"Intern\",\n    \"department\": \"HR\",\n    \"message\": \"sdjsdksjdks ione.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/greetings/651bf9224d1d04fe216aab81",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"greetings",
+								"651bf9224d1d04fe216aab81"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Create Session",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sessionName\": \"sdsdsdsd\",\n    \"sessionType\": \"Conflict\",\n    \"sessionStartTimestamp\": 1696566600000,\n    \"sessionEndTimestamp\": 1696572900000,\n    \"speaker\": \"Shalinda Fdo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/api/atm/session",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"api",
+								"atm",
+								"session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
